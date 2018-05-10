@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/result/result",
+    "pages/detail/detail",
+    "pages/creat/creat",
+    "pages/createSub/createSub",
+    "pages/radio/radio",
+    "pages/statis/statis",
+    "pages/suggest/suggest"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#343434",
+    "navigationBarTitleText": "问卷调查数据收集",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#0085e2",
+    "list": [
+      {
+        "pagePath": "pages/result/result",
+        "selectedIconPath": "images/resultA.png",
+        "iconPath": "images/result.png",
+        "text": "调查结果"
+      },
+      {
+        "pagePath": "pages/creat/creat",
+        "selectedIconPath": "images/createA.png",
+        "iconPath": "images/creat.png",
+        "text": "新建问卷"
+      },
+      {
+        "pagePath": "pages/suggest/suggest",
+        "selectedIconPath": "images/suggestA.png",
+        "iconPath": "images/suggest.png",
+        "text": "意见反馈"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+<!--pages/result/result.wxml-->
+<view class="container">
+  <view class="box" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="list">
+      <view class="listT">{{item.title}}</view>
+      <view class="listN">
+        <icon class="iconfont icon-wenjuandaan"></icon>
+        <text>{{item.joinNum?item.joinNum:0}}</text>
+      </view>
+    </view>
+    <view class="boxC">
+      <view>
+        <button open-type='share' data-title="{{item.title}}" data-id="{{item.id}}">
+          <icon class="iconfont icon-msnui-share"></icon>
+          <text>分享</text>
+        </button>
+      </view>
+      <view data-id="{{item.id}}" catchtap="toStatis">
+        <icon class="iconfont icon-tongji"></icon>
+        <text>统计</text>
+      </view>
+      <view data-id="{{item.id}}" catchtap='remove'>
+        <icon class="iconfont icon-iconremove"></icon>
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>

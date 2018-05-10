@@ -1,0 +1,32 @@
+/**index.wxss**/
+.container {
+  height: 100%;
+  padding:0 30rpx;
+} 
+.list {
+  width:100%;
+  padding:40rpx 0;
+  font-size:26rpx;
+  color:#343434;
+  border-bottom:1rpx solid #58a6f6;
+  display: flex;
+  flex-direction: row;
+}
+.listT {
+  flex:1;
+  width:1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listN {
+  width:100rpx;
+}
+.listN icon {
+  margin-top:-14rpx;
+  color:#58a6f6
+}
+.listN text {
+  margin-left:10rpx;
+  vertical-align: bottom;
+}

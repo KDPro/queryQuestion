@@ -1,0 +1,15 @@
+/**app.wxss**/
+@import "/assets/font/iconfont";
+page {
+  width:100%;
+  height:100%;
+}
+
+
+     /* // {
+      //   "pagePath": "pages/index/index",
+      //   "selectedIconPath": "images/listA.png",
+      //   "iconPath": "images/list.png",
+      //   "text": "问卷列表"
+      // },
+          // "pages/index/index", */

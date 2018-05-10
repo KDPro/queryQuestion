@@ -1,0 +1,81 @@
+/* pages/result/result.wxss */
+page {
+  background-color: #eaf3fb;
+}
+.container {
+  padding:0 20rpx;
+  background-color: #eaf3fb;
+  color:#343434;
+   overflow: auto; 
+  padding-bottom:30rpx;
+  box-sizing: border-box;
+}
+.box {
+  padding:0 20rpx;
+  background-color: white;
+  border-radius: 5px;
+  margin-top:30rpx;
+}
+.list {
+  width:100%;
+  padding:20rpx 0;
+  font-size:26rpx;
+  color:#343434;
+  border-bottom:1rpx solid #dadada;
+  display: flex;
+  flex-direction: row;
+}
+.listT {
+  flex:1;
+  width:1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listN {
+  width:100rpx;
+}
+.listN icon {
+  margin-top:-14rpx;
+  color:#58a6f6
+}
+.listN text {
+  margin-left:10rpx;
+  vertical-align: bottom;
+}
+.boxC {
+  width:100%;
+  margin:0 auto;
+  padding:40rpx 0;
+  font-size:30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.boxC view {
+  flex:1;
+  width:20px;
+  text-align: center;
+}
+.boxC view button {
+  padding:0;
+  line-height: inherit;
+  background-color: transparent; 
+  font-size:inherit;
+}
+button::after {
+  border:none;
+}
+.boxC view icon{
+  font-size:60rpx;
+  display: block;
+  color:#58a6f6;
+}
+.boxC view text{
+  color:#343434;
+}
+.boxC view:nth-of-type(1) icon {
+  color:#fd535f;
+}
+.boxC view:nth-of-type(3) icon {
+  color:#fc811e;
+}

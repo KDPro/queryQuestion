@@ -1,0 +1,38 @@
+<!--pages/radio/radio.wxml-->
+<view class="container">
+  <view class="question">
+    <view class="questionB">
+      <view class="input">
+        <input placeholder='请输入标题' bindinput='title' value="{{title}}"></input>
+      </view>
+    </view>
+    <view class="questionB" wx:if="{{type}}">
+      <view class="input" 
+      wx:for="{{answerslist}}" 
+      wx:key="{{index}}"
+      data-index="{{index}}"
+      catchlongtap='remove' >
+        <text>选项{{index+1}}:</text>
+        <input placeholder='请输入选项内容' 
+        data-index="{{index}}" 
+        bindinput='addTitle' 
+        value='{{item.answer}}'></input>
+      </view>
+      <view class="input add" catchtap='addOptions'>
+        <icon class="iconfont icon-msnui-add-line"></icon>
+        <text>添加选项</text>
+      </view>
+    </view>
+    <view class="questionB">
+      <view class="input">
+        <text>{{type?"切换至填空题":"切换至单选题"}}</text>
+        <switch checked="{{type}}" bindchange="changeType"/>
+      </view>
+      <view class="input">
+        <text>此题目必须答</text>
+        <switch checked="{{isMust}}" bindchange="changeIsmust"/>
+      </view>
+    </view>
+  </view>
+  <button class="btn" catchtap='submit'>提交</button>
+</view>

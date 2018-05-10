@@ -1,0 +1,47 @@
+<!--pages/createSub/createSub.wxml-->
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="title">{{question.paper.title}}</view>
+  <view class="des">{{question.paper.des}}</view>
+   <view class="question" wx:for="{{question.psqList}}" wx:key="{{index}}">
+    <view class="questionB">
+      <view class="questionT">
+      <text wx:if="{{item.isMust == 1}}">*</text>
+        {{index+1}}、{{item.question}}
+        <view 
+        wx:if="{{confirm}}"
+        catchtap="edit" 
+        data-index="{{index}}">
+          <icon class="iconfont icon-icon_edit"></icon> 
+          修改
+        </view>
+      </view>
+      <view class="questionA">
+        <radio-group class="radio-group" 
+        wx:if="{{item.type == 1}}">
+          <label class="radio"  wx:for="{{item.answerslist}}" wx:key="{{index}}">
+            <radio value="{{item.id}}"/>{{item.answer}}
+          </label>
+        </radio-group>
+        <view class="textarea" wx:if="{{item.type == 0}}">
+          <textarea placeholder="请输入回答"/>
+        </view>
+      </view>
+    </view>
+  </view> 
+  <view class="question" wx:if="{{confirm}}">
+    <view class="selectType">
+      <view class="toRadio" data-type="1" catchtap="toRadio">
+        <icon class="iconfont icon-guanbi"></icon>
+        单选题
+      </view>
+      <view class="toFillBlack" data-type="0" catchtap="toRadio">
+        <icon class="iconfont icon-combinedshapecopy2"></icon>
+        填空题
+      </view>
+    </view>
+  </view>
+  <button class="btn" catchtap='submit' wx:if="{{confirm}}">提交</button>
+  <button class="btn" catchtap='publish' wx:if="{{!confirm}}">确认发布</button>
+  <button class="btn" catchtap='returnEdit' wx:if="{{!confirm}}">返回修改</button>
+</view>

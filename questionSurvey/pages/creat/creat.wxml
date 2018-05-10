@@ -1,0 +1,16 @@
+<!--pages/creat/creat.wxml-->
+<view class="container">
+    <view class="input mt50">
+      调查名称：
+    </view>
+    <view class="input">
+      <input placeholder='请输入名称' bindinput='surveyName' value="{{paper.title}}"></input>
+    </view>
+    <view class="input mt40">
+      具体内容：
+    </view>
+    <view class="input">
+      <textarea placeholder='请输入具体内容' bindinput='surveyCon' value="{{paper.des}}"></textarea>
+    </view>
+    <button class="btn" catchtap='tostep'>下一步</button>
+</view>

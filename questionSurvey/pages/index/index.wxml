@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="list" wx:for="{{list}}" wx:key="{{index}}" data-id="{{item.id}}" catchtap='toDetail'>
+      <view class="listT">{{item.title}}</view>
+      <view class="listN">
+        <icon class="iconfont icon-wenjuandaan"></icon>
+        <text>{{item.joinNum?item.joinNum:0}}</text>
+      </view>
+    </view>
+</view>

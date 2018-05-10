@@ -1,0 +1,69 @@
+<!--pages/statis/statis.wxml-->
+<view class="container">
+  <view class="box" 
+  wx:for="{{psqlist}}"
+  wx:for-index="psqlistIndex"
+  wx:for-item="psqlistItem"   
+  wx:key="{{psqlistIndex}}">
+    <view class="list">
+      <view class="listT"><text>第{{psqlistItem.myOrder}}题 : </text>{{psqlistItem.question}}</view>
+      <view class="listN {{psqlistItem.open?'listNA':''}}" 
+      data-index="{{psqlistIndex}}" 
+      data-type="{{psqlistItem.type}}"
+      data-id="{{psqlistItem.id}}" 
+      catchtap='open'>
+        <button>{{psqlistItem.open?'收起':'查看详情'}}</button>
+      </view>
+    </view>
+    <view class="table" wx:if="{{psqlistItem.open&&psqlistItem.type==1}}">
+      <view class="tr bg-w">
+        <view class="th">选项</view>
+        <view class="th">人数</view>
+        <view class="th ">比例</view>
+      </view>
+      <scroll-view scroll-y class="tbody">
+        <view class="tr" 
+        wx:for="{{psqlistItem.ans.data}}" 
+        wx:for-index="ansIndexD"
+        wx:for-item="ansItemD" 
+        wx:key="{{ansIndexD}}">
+          <view class="td">{{ansItemD.answer}}</view>
+          <view class="td">{{ansItemD.num}}</view>
+          <view class="td">{{ansItemD.sum*100}}%</view>
+        </view>
+        <view class="trBottom">填写本题总人次：{{psqlistItem.ans.sum}}人</view>
+      </scroll-view>
+    </view>
+    <view class="table tableFillB" wx:if="{{psqlistItem.open&&psqlistItem.type==0}}">
+      <view class="tr bg-w">
+        <view class="th thFillB">序号</view>
+        <view class="th thFillB">答案详情</view>
+      </view>
+      <scroll-view scroll-y class="tbody">
+        <view class="tr" wx:for="{{psqlistItem.ans}}" 
+      wx:for-index="ansIndex"
+      wx:for-item="ansItem" 
+      wx:key="{{ansIndex}}">
+          <view class="td thFillB">{{ansIndex+1}}</view>
+          <view class="td thFillB">{{ansItem.answers.answer}}</view>
+        </view>
+      </scroll-view>
+        <view class="trBottom">
+          <text
+          data-index="{{psqlistIndex}}" 
+          data-pages="{{psqlistItem.pages}}"
+          data-current="{{psqlistItem.current}}"
+          data-id="{{psqlistItem.id}}" 
+          catchtap='pageUp'>上一页</text>
+          <text>第{{psqlistItem.current}}页</text>
+          <text
+          data-index="{{psqlistIndex}}" 
+          data-pages="{{psqlistItem.pages}}"
+          data-current="{{psqlistItem.current}}"
+          data-id="{{psqlistItem.id}}" 
+          catchtap='pageDown'>下一页</text>
+        </view>
+        <view class="trB">填写本题总人次：{{psqlistItem.total}}人</view>
+    </view>
+  </view>
+</view>

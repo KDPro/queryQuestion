@@ -1,0 +1,11 @@
+<!--pages/suggest/suggest.wxml-->
+<!--pages/creat/creat.wxml-->
+<view class="container">
+    <view class="input mt40">
+      意见反馈：
+    </view>
+    <view class="input">
+      <textarea placeholder='请输入反馈内容' bindinput='surveyCon' value="{{con}}"></textarea>
+    </view>
+    <button class="btn" catchtap='tostep'>提交</button>
+</view>

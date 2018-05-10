@@ -1,0 +1,67 @@
+/* pages/radio/radio.wxss */
+page {
+  background-color: #eaf3fb;
+}
+.container {
+  padding:0 5rpx;
+  background-color: #eaf3fb;
+  color:#343434;
+  overflow: auto;
+} 
+.question {
+  padding:0 20rpx;
+}
+.questionB {
+  padding:0 20rpx;
+  border-radius:5px;
+  background-color: white;
+  margin-top:24rpx;
+}
+.input text {
+  margin-top:7px;
+  margin-right:15px;
+}
+.input {
+  padding:40rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom:1rpx dashed #dadada;
+  font-size:15px;
+  vertical-align: middle;
+
+}
+.questionB .input:last-child {
+  border-bottom:none;
+}
+.input input {
+  flex:1;
+  height: 35px;
+  border-radius: 35px;
+  background-color: white;
+  border: 1rpx solid #dadada;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+}
+.add {
+  display: block;
+  width:100%;
+  text-align: center;
+}
+.add icon {
+  color:#58a6f6;
+  margin-right:10px;
+}
+.input switch {
+  float:right;
+}
+.btn {
+  width:80%;
+  height:40px;
+  background-color: #58a6f6;
+  border-radius: 40px;
+  line-height:40px;
+  color:white;
+  margin:24rpx auto;
+  font-size:32rpx;
+}

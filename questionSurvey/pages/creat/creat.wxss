@@ -1,0 +1,57 @@
+/* pages/creat/creat.wxss */
+page {
+  background-color: #eaf3fb;
+}
+.container {
+  background-color: #eaf3fb;
+  color: #343434;
+  overflow: auto;
+  font-size: 32rpx;
+}
+
+.input {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.mt50 {
+  margin-top: 100rpx;
+}
+
+.mt40 {
+  margin-top: 80rpx;
+}
+
+input {
+  flex: 1;
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1rpx solid #dadada;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+}
+
+textarea {
+  flex: 1;
+  border: 1rpx solid #dadada;
+  background-color: white;
+  font-size: 30rpx;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 75%;
+  height: 40px;
+  background-color: #58a6f6;
+  border-radius: 40px;
+  line-height: 40px;
+  color: white;
+  margin-top: 50px;
+  font-size: 32rpx;
+}
